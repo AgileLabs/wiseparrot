@@ -1,0 +1,11 @@
+.brand-img {
+	height: 32px;
+	width: 16px;
+	border-radius: 5px;
+}
+
+.footer {
+  padding: 3rem 0;
+  margin-top: 3rem;
+  font-size: 85%;
+}

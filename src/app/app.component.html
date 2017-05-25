@@ -1,4 +1,31 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-light navbar-fixed-top navbar-toggleable bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" (click)="navbarCollapsed = !navbarCollapsed"
+            [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand">
+      <img src="assets/wise-parrot.png" class="brand-img d-inline-block align-top">
+      &nbsp;Wise Parrot
+    </a>
+    <div class="navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/jogadores">
+            <i class="fa fa-video-camera"></i>&nbsp;Movies
+          </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/partidas">
+            <i class="fa fa-book"></i>&nbsp;Books
+          </a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<br>
 <router-outlet></router-outlet>
+<footer class="footer text-muted text-center bg-faded">
+  <div class="container">
+    <p>©2017. Built with care by <b>AgileLabs</b>.</p>
+  </div>
+</footer>
